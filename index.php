@@ -16,8 +16,10 @@
             <h1>{{ title }}</h1>
         </div>
         <div class="container">
+            <input @keyup.enter="saveTodo" v-model="newTodo" type="text" placeholder="Aggiungi una cosa da fare">
+            <button>Aggiungi</button>
             <ul class="todolist">
-                <li v-for="(todo,i) in todolist"> {{ todo }}</li>
+                <li v-for="(todo,i) in todolist"> {{ todo.text }}</li>
             </ul>
         </div>
     </div>
