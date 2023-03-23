@@ -20,12 +20,12 @@ const { createApp } = Vue
         saveTodo() {
             console.log(this.newTodo)
 
-            $data = {
+            let data = {
 				todo: this.newTodo,
 			}
 
             axios
-            .post('./server.php', $data, {
+            .post('./server.php', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
